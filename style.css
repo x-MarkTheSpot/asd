@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+label {
+    font-size: 1rem;
+    color: #495057;
+}
+
+select.form-select {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #495057;
+}
+
+#totalPrice {
+    font-size: 1.6rem;
+    color: #28a745;
+    font-weight: bold;
+}
+
+button {
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%;
+    }
+}
+/* Center the button in the middle of the screen */
+.center-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Background color for the page */
+}
+
+.go-to-website {
+    font-size: 2rem;
+    padding: 20px 40px;
+    background-color: #007BFF; /* Blue hue */
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-to-website:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}

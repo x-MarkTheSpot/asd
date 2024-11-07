@@ -6,9 +6,22 @@ body {
     font-size: 2rem;
     color: black; 
 }
+.about-me:hover {
+    color: rgb(0, 0, 0); 
+}
 
 .about-text {
     font-size: 1.2rem; 
+}
+.navbar-brand {
+    color: rgb(156, 215, 255) ;
+    font-weight: lighter;
+    font-family: 'Cinzel', serif;
+  
+}
+
+.navbar-brand:hover {
+    color: rgb(0, 0, 0) ; 
 }
 
 .dramatic-text {
@@ -16,13 +29,13 @@ body {
     color: rgb(0, 0, 0); 
 }
 h1{
-    color :black
+    color :rgb(0, 106, 255)
 }
 p{
     color :black
 }
 .bottom-title {
-    font-size: 6rem; 
+    font-size: 4rem; 
     color: black;
     text-shadow: -3px -3px 0 #ffffff, 1px -1px 0 #ffffff, -2px 2px 0 #6200cb, 3px 3px 0 #00ffff; 
     margin-top: -20px;
@@ -59,18 +72,42 @@ body {
 .text-on-image {
     position: absolute;
     left: 20px; 
-    top: 120%; 
+    top: 14%; 
     color: white;
     font-size: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Start off-screen to the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
 .text-on-image h2 {
     font-size: 3rem;
+    animation: slideFadeIn 1.5s ease-out forwards; /* Adds the animation */
 }
 
 .text-on-image p {
     font-size: 1.5rem;
+    opacity: 0; /* Start fully transparent */
+    animation: fadeIn 1.5s ease-out 1.5s forwards; /* Delay to match h2 animation */
+}
+
+/* Optional: Simple fade-in effect for the paragraph */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 
@@ -97,13 +134,24 @@ body {
     height: 240px;   
     object-fit: cover;
 }
+@keyframes slideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Small distance from the bottom */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .popular-title {
-    font-size: 2rem;   
-    color: #333;       
-    font-weight: bold; 
-    text-transform: uppercase; 
-    margin-bottom: 20px; 
-    margin-top: 100px;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    margin-top: 5rem;
 }
 .small-card-title {
     font-size: 1.1rem; 
@@ -149,3 +197,97 @@ body {
     font-weight: bold;
     text-align: center;
 }
+.container {
+    display: flex;            
+    justify-content: flex-start; 
+    width: 100%;                
+}
+.gemstone-gallery {
+    display: flex;              
+    justify-content: flex-start;
+    gap: 20px;                 
+    width: 100%;               
+    overflow-x: auto;         
+    padding-top: 20px;     
+}
+
+
+.gemstone-image {
+    width: 120px;                 /* Set a fixed width for images */
+    height: auto;                 /* Maintain aspect ratio */
+    border-radius: 10px;          /* Optional: Rounded corners for images */
+    object-fit: contain;          /* Ensure images fit inside the container */
+}
+
+.full-background-below {
+    background-image: 
+        linear-gradient(to bottom, rgba(224, 224, 224, 0.5), rgba(0, 0, 0, 0)), 
+        url('https://ecommo--ion.bluenile.com/bn-main/jewel_desktop(2_2).b9138.jpg'),
+        linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));   
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    margin-top: -20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.full-background-below h2 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.text-inside-image {
+    position: absolute;
+    top: 40px;  /* Adjust this value to control the distance from the bottom */
+    left: 20px;   /* Adjust this value to control the distance from the right */
+    position: auto;
+    text-align: right;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* Footer Styling */
+footer.footer {
+    position: bottom;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #add8e6;  /* Light Blue */
+    text-align: center;
+    padding: 1rem 0;  /* Vertical padding */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+/* Style for Customize Now button */
+.large-btn {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    background-color: #a8d2ff; /* Blue hue */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.large-btn:hover {
+    background-color: #81b7f19c; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+
+
+
+
+
